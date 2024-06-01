@@ -20,18 +20,10 @@ const Navbar = () => {
 
     // mobile menu toggle
     const [showMobileNavMenu, setShowMobileNavMenu] = useState(false)
-
     let menuBtn = menuCloseIcon
     if (!showMobileNavMenu) {
         menuBtn = menuIcon
     }
-
-    let mobileMenuClass = showMobileNavMenu
-        ? "absolute z-20 top-0 right-0 min-h-screen w-[60%] bg-off-white px-8 flex items-center justify-start"
-        : "hidden"
-    let overlayClass = showMobileNavMenu
-        ? "absolute z-10 inset-0 bg-very-dark-blue w-screen h-screen opacity-50"
-        : "hidden"
     // mobile menu toggle
 
     return (
@@ -60,15 +52,23 @@ const Navbar = () => {
                     onClick={() =>
                         setShowMobileNavMenu((prevState) => !prevState)
                     }
-                    className="z-30 absolute top-8 right-6"
+                    className={`z-30 ${
+                        showMobileNavMenu ? "fixed" : "absolute"
+                    } top-8 right-6`}
                 />
 
                 <div
-                    className={overlayClass}
+                    className={`fixed z-10 inset-0 bg-very-dark-blue w-screen h-screen opacity-50 ${
+                        showMobileNavMenu || "hidden"
+                    }`}
                     onClick={() => setShowMobileNavMenu(false)}
                 ></div>
 
-                <div className={mobileMenuClass}>
+                <div
+                    className={`fixed z-20 top-0 right-0 min-h-screen w-[60%] bg-off-white px-8 flex items-center justify-start ${
+                        showMobileNavMenu || "hidden"
+                    }`}
+                >
                     <nav className="flex flex-col gap-4">
                         {navItems.map((item, index) => (
                             <NavLink
