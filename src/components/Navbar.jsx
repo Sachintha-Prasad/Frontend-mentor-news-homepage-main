@@ -58,14 +58,14 @@ const Navbar = () => {
                 />
 
                 <div
-                    className={`fixed z-10 inset-0 bg-very-dark-blue w-screen h-screen opacity-50 ${
+                    className={`fixed z-10 inset-0 bg-very-dark-blue w-screen h-dvh opacity-50 ${
                         showMobileNavMenu || "hidden"
                     }`}
                     onClick={() => setShowMobileNavMenu(false)}
                 ></div>
 
                 <div
-                    className={`fixed z-20 top-0 right-0 min-h-screen w-[60%] bg-off-white px-8 flex items-center justify-start ${
+                    className={`fixed z-20 top-0 right-0 min-h-dvh w-[60%] bg-off-white px-8 flex items-center justify-start ${
                         showMobileNavMenu || "hidden"
                     }`}
                 >
