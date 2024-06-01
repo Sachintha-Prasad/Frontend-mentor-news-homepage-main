@@ -3,17 +3,17 @@ import React from "react"
 const BottomMain = () => {
     const recentNewsList = [
         {
-            image: "../src/assets/images/image-retro-pcs.jpg",
+            image: "bg-[url('../src/assets/images/image-retro-pcs.jpg')]",
             title: "Reviving Retro PCs",
             desc: "What happens when old PCs are given modern upgrades?"
         },
         {
-            image: "../src/assets/images/image-top-laptops.jpg",
+            image: "bg-[url('../src/assets/images/image-top-laptops.jpg')]",
             title: "Top 10 Laptops of 2022",
             desc: "Our best picks for various needs and budgets."
         },
         {
-            image: "../src/assets/images/image-gaming-growth.jpg",
+            image: "bg-[url('../src/assets/images/image-gaming-growth.jpg')]",
             title: "The Growth of Gaming",
             desc: "How the pandemic has sparked fresh opportunities."
         }
@@ -23,7 +23,9 @@ const BottomMain = () => {
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {recentNewsList.map((item, index) => (
                 <div key={index} className="flex gap-6">
-                    <img src={item.image} alt="" className="max-w-[120px]" />
+                    <div
+                        className={`${item.image} bg-cover bg-center bg-no-repeat w-full max-w-[120px] h-[160px]`}
+                    ></div>
 
                     <div className="flex flex-col items-start justify-between">
                         <h2 className="text-4xl font-bold text-soft-red">
