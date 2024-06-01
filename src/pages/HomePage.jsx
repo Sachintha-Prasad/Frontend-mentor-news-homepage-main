@@ -6,7 +6,7 @@ import BottomMain from "../components/BottomMain"
 
 const HomePage = () => {
     return (
-        <div className="container grid gap-6 grid-cols-1 lg:grid-cols-3 my-4">
+        <div className="container grid gap-x-6 gap-y-12 grid-cols-1 lg:grid-cols-3 my-4">
             <GridElement gridType="lg:col-span-2">
                 <LeftMain />
             </GridElement>

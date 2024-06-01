@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const LeftMain = () => {
     return (
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
-            <div className="sm:col-span-2 w-full min-h-[375px] bg-[url('../src/assets/images/image-web-3-mobile.jpg')] md:bg-[url('../src/assets/images/image-web-3-desktop.jpg')] bg-cover bg-no-repeat bg-center"></div>
+            <div className="sm:col-span-2 w-full min-h-[300px] bg-[url('../src/assets/images/image-web-3-mobile.jpg')] md:bg-[url('../src/assets/images/image-web-3-desktop.jpg')] bg-cover bg-no-repeat bg-center"></div>
 
             <h1 className="text-4xl md:text-5xl xl:text-7xl font-extrabold text-very-dark-blue">
                 The Bright Future of Web 3.0?
